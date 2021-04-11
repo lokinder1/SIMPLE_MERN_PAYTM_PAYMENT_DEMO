@@ -2,7 +2,6 @@ require("dotenv").config();
 const express = require("express");
 var cors = require("cors");
 const payment = require("./route/payment");
-const PaytmChecksum = require("./utils/PaytmChecksum")
 
 const app = express();
 app.use(cors());

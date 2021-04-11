@@ -28,7 +28,7 @@ router.post("/callback", (req, res) => {
        */
       PaytmChecksum.generateSignature(
         paytmParams,
-        process.env.PAYTM_PAYMENT_MERCHANT_KEY,
+        process.env.PAYTM_PAYMENT_MERCHANT_KEY
       ).then(function (checksum) {
         paytmParams["CHECKSUMHASH"] = checksum;
 
@@ -79,14 +79,13 @@ router.post("/payment", (req, res) => {
   params["WEBSITE"] = process.env.PAYTM_PAYMENT_WEBSITE;
   params["CHANNEL_ID"] = process.env.PAYTM_PAYMENT_CHANNEL_ID;
   params["INDUSTRY_TYPE_ID"] = process.env.PAYTM_PAYMENT_INDUSTRY_TYPE;
-  //   params["CUST_ID"] = process.env.PAYTM_PAYMENT_INDUSTRY_TYPE;
   params["CUST_ID"] = "CUST_001";
 
   params["ORDER_ID"] = uuidv4();
   params["TXN_AMOUNT"] = amount;
   params["CALLBACK_URL"] = "http://localhost:4000/api/callback";
   params["EMAIL"] = email;
-  params["MOBILE_NO"] = "8860892464";
+  params["MOBILE_NO"] = "7777777777";
 
   /**
    * Generate checksum by parameters we have

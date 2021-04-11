@@ -1,9 +1,8 @@
 # SIMPLE_MERN_PAYTM_PAYMENT_DEMO
-It's a simple example or demo project to show stripe payment
+It's a simple example or demo project to demonstrate PayTM payment
 it's made by using following technologies
 - ReactJS
 - NodeJS
-- MongoDB
 - ExpressJS
 - MaterialUI
 
@@ -30,3 +29,24 @@ it's made by using following technologies
     3. start Server App
     yarn start
 ```
+
+## Tasks Completed
+
+1. Homepage
+2. payment checkout component
+3. Basic server to handle Payment
+
+
+## Demo ScreenShots
+
+- PayTM - 1
+  ![PayTM1](paytm1.png)
+
+- PayTM - 2
+  ![PayTM1](paytm2.png)
+
+- PayTM - 3
+  ![PayTM1](paytm3.png)
+
+- PayTM - 4
+  ![PayTM1](paytm4.png)

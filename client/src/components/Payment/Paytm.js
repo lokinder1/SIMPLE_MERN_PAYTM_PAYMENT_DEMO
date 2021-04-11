@@ -1,9 +1,9 @@
 import Button from "@material-ui/core/Button";
+import Grid from "@material-ui/core/Grid";
 import { makeStyles } from "@material-ui/core/styles";
+import TextField from "@material-ui/core/TextField";
 import axios from "axios";
 import React from "react";
-import TextField from "@material-ui/core/TextField";
-import Grid from "@material-ui/core/Grid";
 
 const useStyles = makeStyles(() => ({
   stripeComponent: {
@@ -30,11 +30,6 @@ const CheckoutForm = () => {
       });
 
     console.log(response1);
-
-    // const response2 = await axios.post(
-    //   "https://securegw-stage.paytm.in/order/process",
-    //   response1.data
-    // );
 
     var information = {
       action: "https://securegw-stage.paytm.in/order/process",
@@ -95,37 +90,28 @@ const CheckoutForm = () => {
   return (
     <div className={classes.stripeComponent}>
       <Grid container spacing={3}>
-        {/* <Grid item xs={12}>
+        <Grid item xs={12}>
           <TextField
-            label="Product Name"
+            label="Email"
             variant="outlined"
             s
-            name="product_name"
-            value={formState.product_name || ""}
+            name="email"
+            value={formState.email || ""}
             type="text"
             onChange={handleChange}
           />
         </Grid>
+
         <Grid item xs={12}>
           <TextField
-            label="Quantity"
+            label="amount"
             variant="outlined"
-            name="quantity"
-            value={formState.quantity || ""}
+            name="amount"
+            value={formState.amount || ""}
             type="text"
             onChange={handleChange}
           />
         </Grid>
-        <Grid item xs={12}>
-          <TextField
-            label="Unit"
-            variant="outlined"
-            name="unit_amount"
-            value={formState.unit_amount || ""}
-            type="text"
-            onChange={handleChange}
-          />
-        </Grid> */}
         <Grid item xs={12}>
           <Button variant="contained" color="primary" onClick={handleSubmit}>
             Checkout
